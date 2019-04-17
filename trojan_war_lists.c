@@ -186,7 +186,7 @@ int distribute()
 
 	current_soldier = NULL;
 	current_general = NULL;
-    current_DDL = NULL;
+    	current_DDL = NULL;
 	new_DDL_Soldier = NULL;
 
 	current_soldier = registration_list;
