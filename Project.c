@@ -1,7 +1,7 @@
 /************************************************************//**
-* @file   main.c                                      			*
-* @author Alex Perrakis <csd3826@csd.uoc.gr>  			        *
-*                                                    			*
+* @file   main.c                                      		*
+* @author Alex Perrakis <csd3826@csd.uoc.gr>  			*
+*                                                    		*
 * @brief Header function for the needs of cs - 240a project 2017*
 ****************************************************************/
 
