@@ -1,7 +1,7 @@
 # trojan_war_lists
-A program written in C that implements many operations of linked lists and doubly-linked lists based on trojan war events.
+A program written in C that implements many operations of Linked-Lists and Doubly-Linked-Lists based on trojan war events.
 
-Operations of linked-lists implemented:
+Operations of Linked-Lists implemented:
 <ul>
   <li> Create </li>
   <li> Insert </li>
