@@ -23,8 +23,6 @@
 #define DPRINT(...)
 #endif /* DEBUG */
 
-
-
 void InsertAtEmptyList(struct general * current_general, struct DDL_soldier * new_DDL_Soldier)
 {
 	current_general->soldiers_head = new_DDL_Soldier;
@@ -177,7 +175,6 @@ int print_registration_list()
 	}
 
 	printf("\n\nDONE\n");
-
 }
 
 int distribute()
@@ -315,8 +312,6 @@ int general_resign(int gid1, int gid2)
 	current_DDL_ACH = current_general_ACH->soldiers_head;
 	current_DDL_PAT = current_general_PAT->soldiers_head;
 
-
-
 	/* Insert At the start */ 
 	if (current_DDL_ACH->sid < current_DDL_PAT->sid)
 	{
@@ -339,7 +334,6 @@ int general_resign(int gid1, int gid2)
 
 			return;
 		}
-
 	}
 	/* -------------------------------------------------------------------------- */
 	while (current_general_ACH->soldiers_head != NULL)
@@ -437,8 +431,7 @@ int prepare_battle(int gid1, int gid2, int gid3)
 		{
 			my_combat.soldier_cnt++;
 			if (!flag)
-			{
-				
+			{				
 				if (my_combat.combat_s == NULL)
 				{					
 					my_combat.combat_s = malloc(sizeof(struct c_soldier));
@@ -457,11 +450,8 @@ int prepare_battle(int gid1, int gid2, int gid3)
 					current_c_soldier->next->sid = current_DDL_soldier1start->sid;
 					current_c_soldier->next->next = NULL;
 					current_c_soldier = current_c_soldier->next;
-
-
 				}
 				current_DDL_soldier1start = current_DDL_soldier1start->next;
-
 			}
 			else
 			{
@@ -536,11 +526,7 @@ int prepare_battle(int gid1, int gid2, int gid3)
 			printf("%d, ", current_c_soldier->sid);
 			flag = !flag;
 		}
-
 	}
-
-
-
 	return 1;
 }
 
@@ -592,7 +578,6 @@ int battle(int god_favor)
 
 	printf("\n\nDONE\n");
 
-
 	return 1;
 }
 
@@ -633,8 +618,7 @@ int trojan_horse()
 				{
 					top5[i] = current_general;
 					break;
-				}
-					
+				}					
 			}
 
 			/* Searching again for the minimum combats_no number in the top5[] array */ 
@@ -644,7 +628,6 @@ int trojan_horse()
 				if (top5[i]->combats_no < min->combats_no)
 					min = top5[i];
 			}
-
 		}
 		current_general = current_general->next;
 	}
@@ -656,8 +639,7 @@ int trojan_horse()
 		if (i != 4)
 			printf(", ");
 	}
-	printf("\n\nDONE\n");
-		
+	printf("\n\nDONE\n");		
 }
 
 void removeFromRegistration(int sid)
@@ -712,7 +694,6 @@ int cease_fire()
 	current_c_soldier_1 = my_combat.combat_s;
 	current_c_soldier_2 = my_combat.combat_s->next;
 	current_c_soldier_3 = my_combat.combat_s->next->next;
-
 	
 	/* Searching the generals that have the 3 gid from the 3 first soldiers of the combat list */
 	while (current_general_1->gid != my_combat.combat_s->gid)
@@ -956,7 +937,6 @@ int cease_fire()
 					free(helper);
 				}
 			}
-
 		}
 
 		current_c_soldier_2 = current_c_soldier_2->next->next->next;
@@ -1087,7 +1067,6 @@ int cease_fire()
 }
 
 
-
 int main(int argc, char** argv)
 {
 	FILE *fin = NULL;
@@ -1153,7 +1132,6 @@ int main(int argc, char** argv)
 			else {
 				fprintf(stderr, "%c %d failed\n", event, gid);
 			}
-
 			break;
 		}
 
@@ -1170,7 +1148,6 @@ int main(int argc, char** argv)
 			else {
 				fprintf(stderr, "%c failed\n", event);
 			}
-
 			break;
 		}
 
@@ -1188,7 +1165,6 @@ int main(int argc, char** argv)
 			else {
 				fprintf(stderr, "%c %d %d failed\n", event, gid1, gid2);
 			}
-
 			break;
 		}
 
@@ -1275,7 +1251,6 @@ int main(int argc, char** argv)
 			else {
 				fprintf(stderr, "%c failed\n", event);
 			}
-
 			break;
 		}
 
@@ -1292,7 +1267,6 @@ int main(int argc, char** argv)
 			else {
 				fprintf(stderr, "%c failed\n", event);
 			}
-
 			break;
 		}
 
@@ -1310,12 +1284,3 @@ int main(int argc, char** argv)
 	
 	return (EXIT_SUCCESS);
 }
-
-
-
-
-
-
-
-
-
