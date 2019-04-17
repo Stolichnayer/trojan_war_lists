@@ -1,7 +1,7 @@
 /********************************************************//**
- * @file   geo.h                                      		*
- * @author Antonis Papaioannou <papaioan@csd.uoc.gr>  		*
- *                                                    		*
+ * @file   geo.h                                      	    *
+ * @author Antonis Papaioannou <papaioan@csd.uoc.gr>  	    *
+ *                                                    	    *
  * @brief Header file for the needs of cs-240a project 2017 *
  ***********************************************************/
 
